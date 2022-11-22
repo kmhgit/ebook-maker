@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>未知</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+<link href="page_styles1.css" rel="stylesheet" type="text/css"/>
+
+  
+
+
+<link href="calibreHtmlOutBasicCss.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+
+<div class="calibreMeta">
+  <div class="calibreMetaTitle">
+  
+  
+    
+    <h1>
+      <a href="../djdgi-4tdyc.html">New簡明-電子書製作流程初探
+</a>
+    </h1>
+    
+    
+  
+  </div>
+  <div class="calibreMetaAuthor">
+    HUA-HUA
+
+  </div>
+</div>
+
+<div class="calibreMain">
+
+  <div class="calibreEbookContent">
+    
+      <div class="calibreEbNavTop">
+        
+          <a href="index_split_004.xhtml" class="calibreAPrev">previous page
+</a>
+        
+
+        
+          <a href="index_split_006.xhtml" class="calibreANext">next page
+</a>
+        
+      </div>
+    
+
+    
+<h2 class="p-p9" id="calibre_pb_4"><span id="anchor6" class="calibre"></span> <span class="s-t30">(三) 如何</span><span class="s-t30">「</span><span class="s-t30"> </span><span id="anchor58" class="calibre"></span><span class="s-t30">直式排版</span><span class="s-t30">」—</span><span class="s-t30">加入「額外的</span><span class="s-t30">css</span><span class="s-t30">」</span><a id="anchor59" class="calibre"></a><a id="anchor60" class="calibre"></a></h2>
+<p class="p-p10">  1 在前述「<span class="s-t">轉換書本</span>」時，選左欄【介面外觀】、上欄〈字型〉、再    勾選〈展開<span class="s-t21">css</span>屬性〉</p>
+<p class="p-p10">  2 再選上欄〈樣式〉</p>
+<p class="p-p10">  3  〈樣式〉的「額外的<span class="s-t">css</span>」欄框內要「複製、貼上」下列語碼，然    後把底下的〈字型、邊界、補白...〉全部打勾，按「確定」</p>
+<p class="p-p5"> </p>
+<p class="p-p5">** 「複製、貼上」下列語碼：</p>
+<p class="p-p13">@page{</p>
+<p class="p-p13">margin:5%;</p>
+<p class="p-p13">}</p>
+<p class="p-p13"> </p>
+<p class="p-p13">/*強制使用Kindle內建繁體字型for 5.9.7*/</p>
+<p class="p-p13">@font-face {</p>
+<p class="p-p13">font-family: "songti";</p>
+<p class="p-p13">src: local("Song T")   </p>
+<p class="p-p13">}</p>
+<p class="p-p13">@font-face {</p>
+<p class="p-p13">font-family: "Heiti";</p>
+<p class="p-p13">src: local("MYing Hei T")   </p>
+<p class="p-p13">}</p>
+<p class="p-p13"> </p>
+<p class="p-p13">/*強制使用Kindle內建繁體字型for 5.10.1.1*/</p>
+<p class="p-p13">@font-face {</p>
+<p class="p-p13">    font-family: "songtiTC";</p>
+<p class="p-p13">    src: local("STSongTC"), local("st"), local("st"), local("SongTi"), local("Songti"), local("Songti"), local("Songti SC"), local("Songti TC"), local("STSongti"), local("STSong"), local("Song S"), local("STBShusong"), local("TBMincho"), local("HYMyeongJo"), local("DK-SONGTI")</p>
+<p class="p-p13">    }</p>
+<p class="p-p13">@font-face {</p>
+<p class="p-p13">    font-family: "HeitiTC";</p>
+<p class="p-p13">    src: local("STHeitiTC"), local("ht"), local("STHeiti"), local("STHei"), local("MYing Hei S"), local("TBGothic"), local("Heiti"), local("Heiti SC"), local("Heiti TC"), local("DK-HEITI")</p>
+<p class="p-p13">    } </p>
+<p class="p-p13">@font-face {</p>
+<p class="p-p13">    font-family: "KaiTC";</p>
+<p class="p-p13">    src: local("STKaitiTC"),local("kt"), local("KaiTi"), local("STKaiti"), local("STKai"), local("Kaiti"), local("Kaiti TC"), local("Kaiti SC"), local("DK-KAITI");</p>
+<p class="p-p13">    }</p>
+<p class="p-p13">@font-face {</p>
+<p class="p-p13">    font-family: "YuantiTC";</p>
+<p class="p-p13">    src: local("STYuanTC"), local("yuan"), local("STYuan"), local("Yuanti"), local("Yuanti SC"), local("Yuanti TC")</p>
+<p class="p-p13">    } </p>
+<p class="p-p13"> </p>
+<p class="p-p13">body{</p>
+<p class="p-p13">-epub-writing-mode: vertical-rl;   /*直式設定 for epub*/</p>
+<p class="p-p13">-epub-line-break: normal;          /*斷行設定 for epub*/</p>
+<p class="p-p13">-webkit-writing-mode: vertical-rl; /*直式設定*/</p>
+<p class="p-p13">-webkit-line-break: normal;        /*斷行設定*/</p>
+<p class="p-p13">line-break: strict;                /*斷行設定,參數(normal , auto , strict)*/</p>
+<p class="p-p13">writing-mode: vertical-rl;         /*直式設定 for Kindle*/</p>
+<p class="p-p13">line-height: 1.4;                  /*控制行間距(可忽略)*/</p>
+<p class="p-p13">text-indent: 2em;                  /*首行空兩格*/</p>
+<p class="p-p13">margin: 3%;</p>
+<p class="p-p13">}</p>
+<p class="p-p13"> </p>
+<p class="p-p10"> </p>
+<p class="p-p10">  4 其餘〈轉換書本〉過程同前</p>
+<p class="p-p10">  5 按〈閱讀〉，<span class="s-t">開啟完成的直式電子書、進行閱讀</span>    </p>
+<p class="p-p10">  6 此時雖是直式排版，但還是預設的<span class="s-t21">「</span><span class="s-t21">向左翻頁</span><span id="anchor61" class="s-t"></span><span class="s-t21">」</span> </p>
+<p class="p-p10"><span class="s-t12">  </span>7 接下來，修改成<span class="s-t31">「</span><span class="s-t31">向右翻頁</span><span id="anchor62" class="s-t"></span><span class="s-t31">」</span> </p>
+<p class="p-p5"> </p>
+
+
+
+  </div>
+
+  
+  <div class="calibreToc">
+    <h2><a href="../djdgi-4tdyc.html">Table of contents
+</a></h2>
+    <div>
+  <ul>
+    <li>
+      <a href="index_split_001.xhtml">一 電子書簡介 2</a>
+    </li>
+    <li>
+      <a href="index_split_002.xhtml">二 Calibre－電子書管理軟體 3</a>
+    </li>
+    <li>
+      <a href="index_split_003.xhtml">三 電子書製作流程 4</a>
+    </li>
+    <li>
+      <a href="index_split_003.xhtml#anchor4">(一) 編輯文字檔 4</a>
+    </li>
+    <li>
+      <a href="index_split_004.xhtml">(二) 文字檔轉換電子書 5</a>
+    </li>
+    <li>
+      <a href="index_split_005.xhtml">(三) 如何「 直式排版」—加入「額外的css」 6</a>
+    </li>
+    <li>
+      <a href="index_split_006.xhtml">(四) 如何「向右翻頁」—修改content.opf 8</a>
+    </li>
+    <li>
+      <a href="index_split_007.xhtml">四 電子書傳送、開啟與上傳網站 8</a>
+    </li>
+    <li>
+      <a href="index_split_008.xhtml">五 在線轉換應用軟體—【Aconvert.com】 9</a>
+    </li>
+    <li>
+      <a href="index_split_009.xhtml">六 參考資料 10</a>
+    </li>
+  </ul>
+</div>
+
+
+  </div>
+  
+
+  <div class="calibreEbNav">
+    
+      <a href="index_split_004.xhtml" class="calibreAPrev">previous page
+</a>
+    
+
+    <a href="../djdgi-4tdyc.html" class="calibreAHome">start
+</a>
+
+    
+      <a href="index_split_006.xhtml" class="calibreANext">next page
+</a>
+    
+  </div>
+
+</div>
+
+</body>
+</html>
